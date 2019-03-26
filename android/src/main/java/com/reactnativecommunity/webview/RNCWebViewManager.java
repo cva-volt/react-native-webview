@@ -525,7 +525,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
             "event = document.createEvent('MessageEvent');" +
             "event.initMessageEvent('message', true, true, data.data, data.origin, data.lastEventId, data.source);" +
             "}" +
-            "document.dispatchEvent(event);" +
+            "window.dispatchEvent(event);" +
             "})();");
         } catch (JSONException e) {
           throw new RuntimeException(e);
